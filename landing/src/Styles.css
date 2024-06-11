@@ -202,7 +202,7 @@ h2{
 }
 .chart-container {
     height: 400px;
-    width: 800px;
+    width: 80%;
     border: 1px solid #000;
     margin: 0 auto;
     padding: 20px;
@@ -374,4 +374,34 @@ a:hover {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .searchbar {
+        width: 100%; /* Adjust width */
+    }
+    .news-container{
+        width: 100%;
+    }
+    .statistics{
+        display: block;
+    }
+    .main-content{
+        margin-left: 0;
+    }
+    .chart-container{
+        width: 100%;
+    }
+    .company-info{
+        width: 100%;
+    }
+    .news-container {
+        grid-template-columns: repeat(1, 1fr); /* Change to one column */
+    }
+    .company-info {
+        flex-direction: column; /* Change to column layout */
+    }
 }
