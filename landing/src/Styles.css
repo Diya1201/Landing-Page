@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.navbar{
+    /*width: 100%;*/
+    overflow: hidden;
+    background-color: #13072a;
+    padding: 10px 20px;
+    padding-right: 10px; 
+    padding-left: 10px;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left edge */
+    right: 0; /* Stretch it to the right edge */
+    z-index: 1000; 
+}
+.navbar .row{
+    display: flex;
+    justify-content: space-around;
+    padding: 3px 0;
+    color: white;
+}
+.menu-items a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    /*display: block;*/
+}
+.menu-items a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.navbar .row .menu a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 16px;
+    /*display: block;*/
+}
+.navbar .first-row {
+    margin-top: 10px; /* Add space above the first row */
+    border-bottom: 2px solid #555;
+}
+
+.navbar .second-row {
+    margin-top: 10px; /* Add space between the two rows */
+    /*background-color: #555;*/
+}
+.name{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+}
+.searchbar{
+    /*flex: 1;*/
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding-bottom: 5px;
+    position: relative;
+}
+.searchbar input{
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    padding-right: 30px; /* Space for the icon */
+    width: calc(100% - 30px); /* Adjust for the icon space */
+}
+.icon-div{
+    background-color: #643b9f;
+    height: 35px;
+    width: 45px;
+    position: absolute;
+    top: 1%;
+    right: 0px;
+    border-radius: 28px;
+}
+.icon-search{
+    color: #000;
+    border: none;
+    /*border-radius: 50%;*/
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    top: 44%;
+    right: 14px;
+}
+.navbar .row .menu a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+.buttons {
+    justify-content: center;
+    gap: 10px;
+}
+.buttons button {
+    padding: 3px 20px;
+    border: none;
+    /*border-radius: 4px;*/
+    cursor: pointer;
+    background-color: #13072a;
+    color: #A45EE5;
+    font-size: 16px;
+}
+/*.buttons button:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}*/
+.i{
+    transition: transform 0.3s; /* Add smooth transition */
+}
+.i:hover{
+    transform: translateY(-50%) scale(1.2);
+}
+/* Main Content */
+.content {
+    display: flex;
+    margin-top: 120px; /* Adjust to match the height of the fixed navbar */
+    background-color: #fff9e3;
+}
+.vertical-menu {
+    width: 200px;
+    position: fixed; /* Keep it fixed */
+    top: 120px; /* Position it below the navbar */
+    left: 0;
+    background-color: #13072a;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+.vertical-menu a {
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+.vertical-menu a:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+/*.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}*/
+.main-content {
+    margin-left: 220px; /* Adjust to make room for the fixed vertical menu */
+    padding: 20px;
+}
+.header{
+    border-bottom: 2px solid #8e918f;
+    width: 380%;
+}
+/*.main-content h3 {
+    display: inline-block;
+    margin-right: 20px; /* Add space between h3 elements 
+}*/
+.pos-val{
+    color: #228822;
+}
+.neg-val{
+    color: #d1001f;
+}
+.values {
+    display: flex;
+    justify-content: space-between;
+    /*gap: 20px;*/
+}
+.col1, .col2 {
+    /*flex: 1;*/
+    /*background-color: #f4f4f4;*/
+    /*padding-top: 5px;*/
+    padding-right: 20px;
+    /*border-radius: 4px;*/
+}
+.values .pos-val {
+    display: inline;
+    margin-left: 5px;
+    font-size: 18px;
+}
+.values .neg-val {
+    display: inline;
+    margin-left: 5px;
+    font-size: 18px;
+}
+.update{
+    margin-top: 5px;
+    font-size: 12px;
+}
+h2{
+    margin-bottom: 5px;
+}
+.chart-container {
+    height: 400px;
+    width: 800px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    padding: 20px;
+}
+.statistics {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+.column2 {
+    flex: 1;
+    margin: 10px; /* Optional: to add space between columns */
+    /*background-color: lightblue;*/
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    flex-direction: column;
+}
+.heading1{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.column1{
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: start;*/
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.table-container {
+    width: 100%;
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table td, table th {
+    border: none; /* Hide table grid lines */ 
+    padding: 8px;
+    /*text-align: left;*/
+}
+table th {
+    color: #643b9f;
+    text-align: right;
+} 
+.table-container td {
+    border-bottom: 1px dotted #999;
+}
+.table-container tr:last-child td {
+    border-bottom: none;
+}
+.table-container td:first-child {
+    font-weight: bold;
+}
+.table-container td:nth-child(2) {
+    text-align: right;
+    /*justify-content: flex-end;*/
+}
+.heading2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.table-container1 {
+    width: 100%;
+    margin-top: 20px;
+}
+.table-container1 tr:last-child td {
+    border-bottom: none;
+}
+.table-container1 td:first-child {
+    font-weight: bold;
+}
+.table-container1 td:nth-child(2) {
+    text-align: right;
+    /*justify-content: flex-end;*/
+}
+.table-container1 td {
+    border-bottom: 1px dotted #999;
+}
+.th1{
+    text-align: left;
+}
+.trigger-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    /*border: 1px solid #ccc;*/
+}
+.trigger-container .company-name {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.trigger-container .overview-text {
+    margin-left: 10px;
+    color: #555;
+}
+.info-content {
+    padding: 10px 0;
+}
+.content-container{
+    display: flex;
+}
+.info-col-1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+.info-col-2 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Optional: Add some space between items */
+    width: 100%; /* Optional: Set the width of the container */
+}
+.text-item {
+    width: 45%; /* Each item takes up 45% of the container's width */
+    text-align: center; /* Center text inside each item */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the width */
+    /*border: 1px solid #ccc; /* Add border for visibility */
+    /*margin-bottom: 5px; /* Space between the items and additional text */
+}
+.main-text{
+    font-weight: bold;
+    margin: 0;
+}
+.additional-text {
+    /*margin-top: 5px; /* Adjust space between main text and additional text */
+    font-size: 0.9em; /* Slightly smaller font for additional text */
+    margin: 0;
+}
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.content-container {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+}
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 20px; /* Gap between columns */
+}
+.article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
