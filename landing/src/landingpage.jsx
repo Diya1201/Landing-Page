@@ -52,12 +52,12 @@ function StockLandingPage() {
             </div>
             <div className="content">
                 <div className="vertical-menu">
-                    <a href=" "> Stock </a>
-                    <a href=" "> Chart </a>
-                    <a href=" "> Ratios </a>
-                    <a href=" "> Analyst Estimates </a>
-                    <a href=" "> About Info </a>
-                    <a href=" "> News </a>
+                    <a href="#section1"> Stock </a>
+                    <a href="#section4"> Chart </a>
+                    <a href="#section2"> Ratios </a>
+                    <a href="#section5"> Analyst Estimates </a>
+                    <a href="#section3"> About Info </a>
+                    <a href="#section6"> News </a>
                 </div>
                 <div className="main-content">
                     <div className="header">
@@ -73,15 +73,15 @@ function StockLandingPage() {
                             <p className="update"> After hours: June 7 at 7:59 PM EDT </p>
                         </div>
                     </div>
-                    <div className="chart-container">
-                        <CandlestickChart/> 
+                    <div className="chart-container" id="section1">
+                        <CandlestickChart id="section4"/> 
                     </div>
                     <h1> Statistics: AAPL </h1>
-                    <div className="statistics">
+                    <div className="statistics" id="section2">
                          <ValuationMeasures />
-                         <AnalysisEstimates />
+                         <AnalysisEstimates id="section5"/>
                     </div>
-                    <div className="company-info">
+                    <div className="company-info" id="section3">
                         <Collapsible trigger={
                             <div className="trigger-container" onClick={toggleOpen}>
                                 {isOpen ? <FaChevronUp className="icon" /> : <FaChevronDown className="icon" />}
@@ -120,7 +120,7 @@ function StockLandingPage() {
                             </div>
                         </Collapsible>
                     </div>
-                    <NewsArticles />
+                    <NewsArticles id="section6"/>
                 </div>
             </div>
         </div>
